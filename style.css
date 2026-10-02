@@ -1,0 +1,1075 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 120px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 50px;
+    color: #172554;
+}
+
+p {
+    font-size: 20px;
+    color: #4b5563;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#rights {
+    display: none;
+    margin-top: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+#schoolRights {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.school-topics {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.topic {
+    width: 200px;
+    padding: 18px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+}
+
+.topic {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.topic h3 {
+    font-size: 17px;
+}
+
+.topic p {
+    font-size: 14px;
+}
+
+#privacyInfo {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: left;
+}
+
+#privacyInfo h2 {
+    text-align: center;
+}
+
+#privacyInfo h3 {
+    margin-top: 20px;
+}
+
+#privacyInfo p {
+    font-size: 16px;
+}
+
+#privacyInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#privacyInfo h3 {
+    font-size: 18px;
+}
+
+#privacyInfo p {
+    font-size: 16px;
+}
+
+#privacyInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#privacyInfo a {
+    font-size: 14px;
+}
+
+#privacyInfo p:last-child {
+    margin-top: 25px;
+}
+
+#bullyingInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bullyingInfo h3 {
+    font-size: 18px;
+}
+
+#bullyingInfo p {
+    font-size: 16px;
+}
+
+#bullyingInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#fairTreatmentInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fairTreatmentInfo h3 {
+    font-size: 18px;
+}
+
+#fairTreatmentInfo p {
+    font-size: 16px;
+}
+
+#fairTreatmentInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#speakingUpInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#speakingUpInfo h3 {
+    font-size: 18px;
+}
+
+#speakingUpInfo p {
+    font-size: 16px;
+}
+
+#speakingUpInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#onlineRights {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#onlineRights h2 {
+    font-size: 24px;
+}
+
+#onlineRights>p {
+    font-size: 16px;
+}
+
+#onlineRights button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#onlinePrivacyInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#onlinePrivacyInfo h3 {
+    font-size: 18px;
+}
+
+#onlinePrivacyInfo p {
+    font-size: 16px;
+}
+
+#onlinePrivacyInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#onlinePrivacyInfo a {
+    font-size: 14px;
+}
+
+#cyberbullyingInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cyberbullyingInfo h3 {
+    font-size: 18px;
+}
+
+#cyberbullyingInfo p {
+    font-size: 16px;
+}
+
+#cyberbullyingInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#sharingPhotosInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sharingPhotosInfo h3 {
+    font-size: 18px;
+}
+
+#sharingPhotosInfo p {
+    font-size: 16px;
+}
+
+#sharingPhotosInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#stayingSafeInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#stayingSafeInfo h3 {
+    font-size: 18px;
+}
+
+#stayingSafeInfo p {
+    font-size: 16px;
+}
+
+#stayingSafeInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#everydayRights {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#everydayRights h2 {
+    font-size: 24px;
+}
+
+#everydayRights>p {
+    font-size: 16px;
+}
+
+#everydayRights button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+.hero {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 17px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.explore-btn {
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: #172554;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+#fairTreatmentInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fairTreatmentInfo h3 {
+    font-size: 18px;
+}
+
+#fairTreatmentInfo p {
+    font-size: 16px;
+}
+
+#fairTreatmentInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#fairTreatmentInfo a {
+    font-size: 14px;
+}
+
+#speakingUpInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#speakingUpInfo h3 {
+    font-size: 18px;
+}
+
+#speakingUpInfo p {
+    font-size: 16px;
+}
+
+#speakingUpInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#speakingUpInfo a {
+    font-size: 14px;
+}
+
+#buyingReturningInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buyingReturningInfo h3 {
+    font-size: 18px;
+}
+
+#buyingReturningInfo p {
+    font-size: 16px;
+}
+
+#buyingReturningInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#buyingReturningInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buyingReturningInfo h3 {
+    font-size: 18px;
+}
+
+#buyingReturningInfo p {
+    font-size: 16px;
+}
+
+#buyingReturningInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#buyingReturningInfo a {
+    font-size: 14px;
+}
+
+#agreementsInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#agreementsInfo h3 {
+    font-size: 18px;
+}
+
+#agreementsInfo p {
+    font-size: 16px;
+}
+
+#agreementsInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#somethingWrongInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#somethingWrongInfo h3 {
+    font-size: 18px;
+}
+
+#somethingWrongInfo p {
+    font-size: 16px;
+}
+
+#somethingWrongInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+#somethingWrongInfo a {
+    font-size: 14px;
+}
+
+#legalHelpInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#legalHelpInfo h3 {
+    font-size: 18px;
+}
+
+#legalHelpInfo p {
+    font-size: 16px;
+}
+
+#legalHelpInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+/* Mobile Design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #schoolRights,
+    #onlineRights,
+    #everydayRights,
+    #privacyInfo,
+    #bullyingInfo,
+    #fairTreatmentInfo,
+    #speakingUpInfo,
+    #onlinePrivacyInfo,
+    #cyberbullyingInfo,
+    #sharingPhotosInfo,
+    #stayingSafeInfo,
+    #buyingReturningInfo,
+    #agreementsInfo,
+    #somethingWrongInfo,
+    #legalHelpInfo {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .school-topics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .search-box button {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .navbar button {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    .nav-logo {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    #privacyInfo,
+    #bullyingInfo,
+    #fairTreatmentInfo,
+    #speakingUpInfo,
+    #onlinePrivacyInfo,
+    #cyberbullyingInfo,
+    #sharingPhotosInfo,
+    #stayingSafeInfo,
+    #buyingReturningInfo,
+    #agreementsInfo,
+    #somethingWrongInfo,
+    #legalHelpInfo {
+        width: 90%;
+        padding: 22px;
+    }
+
+    #privacyInfo h2,
+    #bullyingInfo h2,
+    #fairTreatmentInfo h2,
+    #speakingUpInfo h2,
+    #onlinePrivacyInfo h2,
+    #cyberbullyingInfo h2,
+    #sharingPhotosInfo h2,
+    #stayingSafeInfo h2,
+    #buyingReturningInfo h2,
+    #agreementsInfo h2,
+    #somethingWrongInfo h2,
+    #legalHelpInfo h2 {
+        font-size: 24px;
+    }
+}
+
+.section-back {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+.section-back:hover {
+    background-color: #d1d5db;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #172554;
+    cursor: pointer;
+}
+
+.navbar button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.navbar button:hover {
+    background-color: #e5e7eb;
+}
+
+.footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background-color: #172554;
+    color: white;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #e5e7eb;
+    margin: 8px 0;
+}
+
+.footer a {
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+#sourcesInfo {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sourcesInfo h2 {
+    font-size: 26px;
+    color: #172554;
+}
+
+#sourcesInfo h3 {
+    font-size: 19px;
+    margin-top: 25px;
+}
+
+#sourcesInfo p {
+    font-size: 16px;
+}
+
+#sourcesInfo a {
+    font-size: 14px;
+    color: #172554;
+    text-decoration: underline;
+}
+
+#sourcesInfo button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-box input:focus {
+    border-color: #172554;
+}
+
+.search-box button {
+    padding: 12px 18px;
+    font-size: 15px;
+    background-color: #172554;
+    color: white;
+}
+
+.search-box button:hover {
+    opacity: 0.9;
+}
+
+#searchMessage {
+    display: none;
+    margin: 15px auto 0;
+    padding: 15px 20px;
+    max-width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    color: #4b5563;
+    font-size: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#searchMessage strong {
+    display: block;
+    color: #172554;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.quick-search {
+    margin-top: 20px;
+}
+
+.quick-search p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.quick-search button {
+    padding: 9px 15px;
+    margin: 4px;
+    font-size: 14px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.quick-search button:hover {
+    transform: translateY(-2px);
+    background-color: #dbeafe;
+}
+
+/* Polished cards */
+
+.card,
+.topic {
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover,
+.topic:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    border-color: #c7d2fe;
+}
+
+.card h3,
+.topic h3 {
+    color: #172554;
+}
+
+.card p,
+.topic p {
+    line-height: 1.5;
+}
+
+/* Information pages */
+
+#privacyInfo,
+#bullyingInfo,
+#fairTreatmentInfo,
+#speakingUpInfo,
+#onlinePrivacyInfo,
+#cyberbullyingInfo,
+#sharingPhotosInfo,
+#stayingSafeInfo,
+#buyingReturningInfo,
+#agreementsInfo,
+#somethingWrongInfo,
+#legalHelpInfo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#privacyInfo h2,
+#bullyingInfo h2,
+#fairTreatmentInfo h2,
+#speakingUpInfo h2,
+#onlinePrivacyInfo h2,
+#cyberbullyingInfo h2,
+#sharingPhotosInfo h2,
+#stayingSafeInfo h2,
+#buyingReturningInfo h2,
+#agreementsInfo h2,
+#somethingWrongInfo h2,
+#legalHelpInfo h2 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#privacyInfo h3,
+#bullyingInfo h3,
+#fairTreatmentInfo h3,
+#speakingUpInfo h3,
+#onlinePrivacyInfo h3,
+#cyberbullyingInfo h3,
+#sharingPhotosInfo h3,
+#stayingSafeInfo h3,
+#buyingReturningInfo h3,
+#agreementsInfo h3,
+#somethingWrongInfo h3,
+#legalHelpInfo h3 {
+    color: #1e3a8a;
+    font-size: 19px;
+    margin-top: 25px;
+}
+
+#privacyInfo p,
+#bullyingInfo p,
+#fairTreatmentInfo p,
+#speakingUpInfo p,
+#onlinePrivacyInfo p,
+#cyberbullyingInfo p,
+#sharingPhotosInfo p,
+#stayingSafeInfo p,
+#buyingReturningInfo p,
+#agreementsInfo p,
+#somethingWrongInfo p,
+#legalHelpInfo p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+.source-card {
+    background-color: #f9fafb;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.source-card h3 {
+    color: #172554;
+    margin-top: 0;
+}
+
+.source-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.source-card a {
+    color: #172554;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.source-note {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #eef2ff;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #374151;
+}
