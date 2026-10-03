@@ -16,7 +16,8 @@ function hideAllSections() {
         "agreementsInfo",
         "somethingWrongInfo",
         "legalHelpInfo",
-        "sourcesInfo"
+        "sourcesInfo",
+        "aboutInfo"
     ];
 
     sections.forEach(function (id) {
@@ -28,13 +29,11 @@ function hideAllSections() {
     });
 }
 
-
 function showRights() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("rights").style.display = "block";
 }
-
 
 function showSchoolRights() {
     document.querySelector(".hero").style.display = "none";
@@ -42,13 +41,11 @@ function showSchoolRights() {
     document.getElementById("schoolRights").style.display = "block";
 }
 
-
 function showPrivacy() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("privacyInfo").style.display = "block";
 }
-
 
 function showBullying() {
     document.querySelector(".hero").style.display = "none";
@@ -56,13 +53,11 @@ function showBullying() {
     document.getElementById("bullyingInfo").style.display = "block";
 }
 
-
 function showFairTreatment() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("fairTreatmentInfo").style.display = "block";
 }
-
 
 function showSpeakingUp() {
     document.querySelector(".hero").style.display = "none";
@@ -70,13 +65,11 @@ function showSpeakingUp() {
     document.getElementById("speakingUpInfo").style.display = "block";
 }
 
-
 function showOnlineRights() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("onlineRights").style.display = "block";
 }
-
 
 function showOnlinePrivacy() {
     document.querySelector(".hero").style.display = "none";
@@ -84,13 +77,11 @@ function showOnlinePrivacy() {
     document.getElementById("onlinePrivacyInfo").style.display = "block";
 }
 
-
 function showCyberbullying() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("cyberbullyingInfo").style.display = "block";
 }
-
 
 function showSharingPhotos() {
     document.querySelector(".hero").style.display = "none";
@@ -98,13 +89,11 @@ function showSharingPhotos() {
     document.getElementById("sharingPhotosInfo").style.display = "block";
 }
 
-
 function showStayingSafe() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("stayingSafeInfo").style.display = "block";
 }
-
 
 function showEverydaySituations() {
     document.querySelector(".hero").style.display = "none";
@@ -112,13 +101,11 @@ function showEverydaySituations() {
     document.getElementById("everydayRights").style.display = "block";
 }
 
-
 function showBuyingReturning() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("buyingReturningInfo").style.display = "block";
 }
-
 
 function showAgreements() {
     document.querySelector(".hero").style.display = "none";
@@ -126,13 +113,11 @@ function showAgreements() {
     document.getElementById("agreementsInfo").style.display = "block";
 }
 
-
 function showSomethingWrong() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("somethingWrongInfo").style.display = "block";
 }
-
 
 function showLegalHelp() {
     document.querySelector(".hero").style.display = "none";
@@ -140,13 +125,17 @@ function showLegalHelp() {
     document.getElementById("legalHelpInfo").style.display = "block";
 }
 
-
 function showSources() {
     document.querySelector(".hero").style.display = "none";
     hideAllSections();
     document.getElementById("sourcesInfo").style.display = "block";
 }
 
+function showAbout() {
+    document.querySelector(".hero").style.display = "none";
+    hideAllSections();
+    document.getElementById("aboutInfo").style.display = "block";
+}
 
 function goHome() {
     hideAllSections();
@@ -159,7 +148,6 @@ function goHome() {
     }
 }
 
-
 function showSearchMessage() {
     const message = document.getElementById("searchMessage");
 
@@ -170,7 +158,6 @@ function showSearchMessage() {
 
     message.style.display = "block";
 }
-
 
 function searchLawLens() {
     const search = document.getElementById("searchInput").value.toLowerCase().trim();
@@ -186,9 +173,7 @@ function searchLawLens() {
         return;
     }
 
-
     // ONLINE & SOCIAL MEDIA
-
     if (
         search.includes("cyberbullying") ||
         search.includes("online bullying") ||
@@ -231,9 +216,7 @@ function searchLawLens() {
     ) {
         showOnlineRights();
 
-
         // SCHOOL
-
     } else if (
         search.includes("bullying") ||
         search.includes("harassment")
@@ -270,9 +253,7 @@ function searchLawLens() {
     ) {
         showSchoolRights();
 
-
         // EVERYDAY SITUATIONS
-
     } else if (
         search.includes("refund") ||
         search.includes("return") ||

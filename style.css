@@ -1073,3 +1073,37 @@ button {
     line-height: 1.6;
     color: #374151;
 }
+
+#aboutInfo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#aboutInfo h2 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#aboutInfo p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+@media (max-width: 600px) {
+    #aboutInfo {
+        width: 90%;
+        padding: 22px;
+    }
+
+    #aboutInfo h2 {
+        font-size: 24px;
+    }
+}
