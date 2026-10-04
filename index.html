@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>LawLens</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawLens — Know Your Rights</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-logo" onclick="goHome()">⚖️ LawLens</div>
 
@@ -15,144 +18,288 @@
             <button onclick="goHome()">Home</button>
             <button onclick="showAbout()">About</button>
             <button onclick="showSources()">Sources</button>
+            <button class="theme-btn" onclick="toggleDarkMode()">🌙</button>
         </div>
     </nav>
+
+
+    <!-- HOME -->
     <div class="hero">
+
+        <div class="hero-badge">⚖️ Legal information made simpler</div>
 
         <div class="logo">⚖️</div>
 
         <h1>LawLens</h1>
 
-        <p class="tagline">Understand your rights. Know your options.</p>
-
-        <p class="intro">
-            Simple legal information for everyday situations.
+        <p class="tagline">
+            Understand your rights. Know your options.
         </p>
 
-        <button class="explore-btn" onclick="showRights()">Explore Your Rights</button>
+        <p class="intro">
+            Simple, accessible legal information for everyday situations.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="primary-btn" onclick="showRights()">
+                Explore Your Rights
+            </button>
+
+            <button class="secondary-btn" onclick="showProblemFinder()">
+                🧠 I Have a Problem
+            </button>
+        </div>
+
+
+        <!-- SEARCH -->
         <div class="search-box">
+
             <input type="text" id="searchInput" placeholder="Search LawLens..."
                 onkeydown="if(event.key === 'Enter') searchLawLens()">
+
             <button onclick="searchLawLens()">🔎 Search</button>
+
         </div>
+
         <div id="searchMessage"></div>
+
+
+        <!-- QUICK TOPICS -->
         <div class="quick-search">
+
             <p>Quick topics</p>
 
             <button onclick="showPrivacy()">🔒 Privacy</button>
+
             <button onclick="showBullying()">🛡️ Bullying</button>
+
             <button onclick="showLegalHelp()">⚖️ Legal Help</button>
+
         </div>
+
     </div>
 
-    <div id="rights">
 
-        <h2>Know Your Rights</h2>
-        <button onclick="goHome()">← Home</button>
+    <!-- RIGHTS -->
+    <div id="rights" class="page-section">
+
+        <button class="section-back" onclick="goHome()">← Home</button>
+
+        <div class="section-heading">
+            <span>Explore</span>
+            <h2>Know Your Rights</h2>
+            <p>
+                Explore simple information about common situations.
+            </p>
+        </div>
+
         <div class="cards">
 
             <div class="card" onclick="showSchoolRights()">
-                <h3>🏫 At School</h3>
-                <p>Learn about rights and responsibilities in school.</p>
+                <div class="card-icon">🏫</div>
+                <h3>At School</h3>
+                <p>
+                    Rights, responsibilities, safety, and getting help at school.
+                </p>
             </div>
 
             <div class="card" onclick="showOnlineRights()">
-                <h3>📱 Online & Social Media</h3>
-                <p>Learn about privacy, safety, and digital rights.</p>
+                <div class="card-icon">📱</div>
+                <h3>Online & Social Media</h3>
+                <p>
+                    Privacy, online safety, cyberbullying, and sharing content.
+                </p>
             </div>
 
             <div class="card" onclick="showEverydaySituations()">
-                <h3>⚖️ Everyday Situations</h3>
-                <p>Explore simple legal information for everyday situations.</p>
+                <div class="card-icon">⚖️</div>
+                <h3>Everyday Situations</h3>
+                <p>
+                    Purchases, agreements, problems, and finding legal help.
+                </p>
             </div>
 
         </div>
 
     </div>
 
-    <div id="schoolRights">
+
+    <!-- SCHOOL -->
+    <div id="schoolRights" class="page-section">
 
         <button class="section-back" onclick="showRights()">← Back to Rights</button>
 
-        <h2>Rights at School</h2>
+        <div class="section-heading">
+            <span>🏫 School</span>
+            <h2>Rights at School</h2>
+            <p>
+                Learn about common concerns students may face at school.
+            </p>
+        </div>
 
-        <p>Learn about your rights, responsibilities, and what you can do if you face a problem at school.</p>
-
-        <div class="school-topics">
-            <p>Learn about your rights, responsibilities, and what you can do if you face a problem at school.</p>
-
+        <div class="topic-grid">
 
             <div class="topic" onclick="showBullying()">
-
                 <h3>🛡️ Bullying & Harassment</h3>
-
                 <p>Learn about bullying, harassment, and ways to seek help.</p>
-
             </div>
 
             <div class="topic" onclick="showPrivacy()">
-
                 <h3>🔒 Privacy</h3>
-
-                <p>Learn about privacy and how your personal information may be protected.</p>
-
+                <p>Learn about privacy and personal information.</p>
             </div>
 
             <div class="topic" onclick="showFairTreatment()">
-
                 <h3>⚖️ Fair Treatment</h3>
-
-                <p>Learn about equal and fair treatment in educational settings.</p>
-
+                <p>Explore fair and equal treatment in educational settings.</p>
             </div>
 
             <div class="topic" onclick="showSpeakingUp()">
-
-                <h3>🗣️ Speaking Up & Getting Help</h3>
-
-                <p>Learn what steps you can take when you have a concern at school.</p>
+                <h3>🗣️ Speaking Up</h3>
+                <p>Learn what you can do when you have a concern.</p>
             </div>
+
         </div>
+
     </div>
-    <div id="privacyInfo">
-        <button class="section-back" onclick="showSchoolRights()">← Back to School Rights</button>
-        <h2>🔒 Understanding Privacy</h2>
 
-        <p><strong>Note:</strong> Privacy laws are different in each country. This page provides general educational
-            information, not legal advice.</p>
-        <h3>What is personal information?</h3>
 
-        <p>Children have a right to privacy. This includes protection of their privacy, family, home,
-            communications,
-            and reputation.</p>
-        <p>Personal information is information that can identify you or tell others something about you, such as
-            your
-            name, photos, location, or contact details.</p>
+    <!-- ONLINE -->
+    <div id="onlineRights" class="page-section">
 
-        <h3>Why does privacy matter?</h3>
+        <button class="section-back" onclick="showRights()">← Back to Rights</button>
 
-        <p>Privacy helps you have control over information about yourself and decide when it is appropriate to share
-            it.
-        </p>
+        <div class="section-heading">
+            <span>📱 Digital life</span>
+            <h2>Online & Social Media</h2>
+            <p>
+                Explore common online privacy and safety situations.
+            </p>
+        </div>
 
-        <h3>What can you do?</h3>
+        <div class="topic-grid">
 
-        <p>If you are worried that someone has shared your personal information without your permission, consider
-            talking to a trusted adult or another person who can help you.</p>
-        <p>Think carefully before sharing personal information online or with others. If you are concerned about how
-            your information is being used, talk to a trusted adult or your school.</p>
+            <div class="topic" onclick="showOnlinePrivacy()">
+                <h3>🔐 Online Privacy</h3>
+                <p>Understand personal information and privacy settings.</p>
+            </div>
+
+            <div class="topic" onclick="showCyberbullying()">
+                <h3>🛡️ Cyberbullying</h3>
+                <p>Learn what you can do when bullying happens online.</p>
+            </div>
+
+            <div class="topic" onclick="showSharingPhotos()">
+                <h3>📸 Sharing Photos</h3>
+                <p>Think about consent, privacy, and sharing images.</p>
+            </div>
+
+            <div class="topic" onclick="showStayingSafe()">
+                <h3>🔐 Staying Safe</h3>
+                <p>Explore practical online safety habits.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- EVERYDAY -->
+    <div id="everydayRights" class="page-section">
+
+        <button class="section-back" onclick="showRights()">← Back to Rights</button>
+
+        <div class="section-heading">
+            <span>⚖️ Everyday life</span>
+            <h2>Everyday Situations</h2>
+            <p>
+                Simple information for common everyday problems.
+            </p>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic" onclick="showBuyingReturning()">
+                <h3>🛒 Buying & Returning</h3>
+                <p>Learn about purchases, receipts, returns, and refunds.</p>
+            </div>
+
+            <div class="topic" onclick="showAgreements()">
+                <h3>📝 Agreements</h3>
+                <p>Things to consider before accepting an agreement.</p>
+            </div>
+
+            <div class="topic" onclick="showSomethingWrong()">
+                <h3>⚠️ Something Went Wrong</h3>
+                <p>Steps to take when you have a problem with a service or purchase.</p>
+            </div>
+
+            <div class="topic" onclick="showLegalHelp()">
+                <h3>⚖️ Legal Help</h3>
+                <p>Learn how to organize your situation and look for help.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM FINDER -->
+    <div id="problemFinder" class="page-section">
+
+        <button class="section-back" onclick="goHome()">← Home</button>
+
+        <div class="section-heading">
+            <span>🧠 Problem Finder</span>
+            <h2>What are you dealing with?</h2>
+            <p>
+                Choose the situation that is closest to your problem.
+            </p>
+        </div>
+
+        <div class="problem-grid">
+
+            <button onclick="showBullying()">🛡️ Someone is bullying me</button>
+
+            <button onclick="showPrivacy()">🔒 My privacy is being affected</button>
+
+            <button onclick="showCyberbullying()">📱 Something is happening online</button>
+
+            <button onclick="showSharingPhotos()">📸 A photo was shared</button>
+
+            <button onclick="showBuyingReturning()">🛒 I have a problem with a purchase</button>
+
+            <button onclick="showAgreements()">📝 I don't understand an agreement</button>
+
+            <button onclick="showFairTreatment()">⚖️ I feel I was treated unfairly</button>
+
+            <button onclick="showSpeakingUp()">🗣️ I don't know how to speak up</button>
+
+            <button onclick="showLegalHelp()">⚖️ I need legal help</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- INFO PAGES -->
+
+    <div id="privacyInfo" class="info-page">
+
+        <button class="section-back" onclick="showSchoolRights()">← Back</button>
+
+        <h2>🔒 Privacy</h2>
+
         <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text#16" target="_blank">
-                UN Convention on the Rights of the Child, Article 16
-            </a>
+            Privacy involves how personal information is collected, used,
+            stored, and shared.
         </p>
-        <p class="topic-source">
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
-                UNICEF — Convention on the Rights of the Child
-            </a>
-        </p>
+
+        <div class="info-highlight">
+            Before sharing personal information, consider why it is needed
+            and who may have access to it.
+        </div>
+
         <div class="action-box">
             <h3>🧭 What Can You Do?</h3>
 
@@ -160,178 +307,117 @@
                 <li>Think about what personal information is being collected.</li>
                 <li>Ask why the information is needed and how it will be used.</li>
                 <li>Avoid sharing sensitive information when it is not necessary.</li>
-                <li>If you are concerned, talk to a trusted adult or responsible person.</li>
+                <li>If you are concerned, talk to a trusted adult.</li>
             </ol>
 
             <p class="action-note">
                 Privacy rights and rules can differ depending on the situation and local laws.
             </p>
         </div>
+
+        <div class="topic-source">
+            Source:
+            <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
+                UNICEF — Convention on the Rights of the Child
+            </a>
+        </div>
+
     </div>
 
-    <div id="bullyingInfo">
 
-        <button class="section-back" onclick="showSchoolRights()">← Back to School Rights</button>
+    <div id="bullyingInfo" class="info-page">
+
+        <button class="section-back" onclick="showSchoolRights()">← Back</button>
 
         <h2>🛡️ Bullying & Harassment</h2>
 
         <p>
-            Bullying is repeated harmful behavior that can happen through
-            physical actions, words, social behavior, or digital communication.
+            Bullying can involve repeated harmful behavior, including
+            physical, verbal, social, or online behavior.
         </p>
 
-        <h3>What can bullying look like?</h3>
+        <div class="info-highlight">
+            You do not have to deal with a serious or unsafe situation alone.
+        </div>
 
-        <p>
-            Bullying can include insults, threats, physical aggression,
-            spreading rumors, deliberately excluding someone, or harmful
-            behavior online.
-        </p>
-
-        <h3>What can you do?</h3>
-
-        <p>
-            If you experience bullying, consider talking to a trusted adult,
-            teacher, school counselor, parent, or another person who can help.
-            If it happens online, you can also consider saving evidence and
-            using the platform's reporting tools.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            You do not have to deal with bullying alone. Schools and other
-            responsible adults can help address concerns and support students.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
-                UNESCO — Safe learning environments
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
                 <li>Keep a record of what happened.</li>
                 <li>Tell a trusted adult, teacher, or school counselor.</li>
-                <li>If the situation continues, report it through the appropriate school process.</li>
+                <li>If the situation continues, use the appropriate school reporting process.</li>
                 <li>If you feel unsafe, seek help from a trusted adult or relevant authority.</li>
             </ol>
 
             <p class="action-note">
                 The right steps can depend on the situation and local rules.
             </p>
+
         </div>
-    </div>
-    <div id="fairTreatmentInfo">
 
-        <button onclick="showSchoolRights()"><button class="section-back" onclick="showSchoolRights()">← Back to
-                School
-                Rights</button></button>
-
-        <h2>⚖️ Fair Treatment</h2>
-
-        <p><strong>Note:</strong> The exact legal protections can differ between countries. This page provides
-            general
-            educational information, not legal advice.</p>
-
-        <h3>What does fair treatment mean?</h3>
-
-        <p>
-            Every child has the right to be treated without discrimination.
-            This includes protection regardless of characteristics such as
-            race, religion, language, disability, or family background.
-        </p>
-
-        <h3>What does this mean at school?</h3>
-
-        <p>
-            Schools should respect students' rights and provide education
-            on the basis of equal opportunity. School discipline should also
-            respect the child's human dignity.
-        </p>
-
-        <h3>What can you do?</h3>
-
-        <p>
-            If you believe you are being treated unfairly at school, consider
-            speaking to a trusted teacher, counselor, parent, or another
-            responsible adult. Explain what happened clearly and ask what
-            support is available.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
-                UNICEF — Convention on the Rights of the Child, Articles 2 & 28
-            </a>
-        </p>
-        <p class="topic-source">
-            <strong>Source:</strong>
+        <div class="topic-source">
+            Source:
             <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
                 UNESCO — Safe Learning Environments
             </a>
+        </div>
+
+    </div>
+
+
+    <div id="fairTreatmentInfo" class="info-page">
+
+        <button class="section-back" onclick="showSchoolRights()">← Back</button>
+
+        <h2>⚖️ Fair Treatment</h2>
+
+        <p>
+            Students may have concerns when they believe they are being
+            treated differently or unfairly in an educational setting.
         </p>
+
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
                 <li>Write down what happened and when it happened.</li>
                 <li>Ask for an explanation if you feel you were treated unfairly.</li>
                 <li>Talk to a trusted teacher, adult, or school counselor.</li>
-                <li>If needed, use the appropriate complaint or reporting process.</li>
+                <li>If needed, use the appropriate complaint process.</li>
             </ol>
 
             <p class="action-note">
-                What counts as unfair treatment and what options are available can vary by situation and local rules.
+                What counts as unfair treatment can vary by situation and local rules.
             </p>
-        </div>
-    </div>
-    <div id="speakingUpInfo">
 
-        <button onclick="showSchoolRights()"><button class="section-back" onclick="showSchoolRights()">← Back to
-                School
-                Rights</button></button>
+        </div>
+
+        <div class="topic-source">
+            Source:
+            <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
+                UNESCO — Safe Learning Environments
+            </a>
+        </div>
+
+    </div>
+
+
+    <div id="speakingUpInfo" class="info-page">
+
+        <button class="section-back" onclick="showSchoolRights()">← Back</button>
 
         <h2>🗣️ Speaking Up & Getting Help</h2>
 
         <p>
-            If something is wrong at school, you have the right to be heard
-            and to seek appropriate help and support.
+            If something concerns you at school, you can start by explaining
+            what happened to someone you trust.
         </p>
 
-        <h3>Who can you talk to?</h3>
-
-        <p>
-            Consider speaking to a trusted teacher, school counselor,
-            parent, guardian, or another responsible adult.
-        </p>
-
-        <h3>How can you explain your concern?</h3>
-
-        <p>
-            Try to explain what happened clearly. If appropriate, keep
-            messages, documents, or other information that may help explain
-            the situation.
-        </p>
-
-        <h3>Why does speaking up matter?</h3>
-
-        <p>
-            Children have the right to express their views on matters that
-            affect them, with those views given appropriate consideration
-            according to their age and maturity.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text#12" target="_blank">
-                UNICEF — Convention on the Rights of the Child, Article 12
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
@@ -342,213 +428,103 @@
             </ol>
 
             <p class="action-note">
-                Available options can depend on the situation, school policies, and local rules.
+                Available options can depend on the situation and school policies.
             </p>
-        </div>
-    </div>
-    </div>
-    <div id="onlineRights">
-
-        <button onclick="showRights()">← Back to Rights</button>
-
-        <h2>📱 Online & Social Media</h2>
-
-        <p>Learn how to understand your digital rights, protect your privacy, and stay safer online.</p>
-
-        <div class="school-topics">
-
-            <div class="topic" onclick="showOnlinePrivacy()">
-                <h3>🔐 Online Privacy</h3>
-                <p>Understand what personal information you share online and why it matters.</p>
-            </div>
-
-            <div class="topic" onclick="showCyberbullying()">
-                <h3>💬 Cyberbullying</h3>
-                <p>Learn about harmful online behavior and ways to seek help.</p>
-            </div>
-
-            <div class="topic" onclick="showSharingPhotos()">
-                <h3>📸 Sharing Photos</h3>
-                <p>Think about privacy and permission before sharing photos or information about others.</p>
-            </div>
-
-            <div class="topic" onclick="showStayingSafe()">
-                <h3>🛡️ Staying Safe</h3>
-                <p>Learn simple ways to protect your accounts and personal information online.</p>
-            </div>
 
         </div>
 
     </div>
-    <div id="onlinePrivacyInfo">
 
-        <button onclick="showOnlineRights()"><button class="section-back" onclick="showOnlineRights()">← Back to
-                Online
-                &
-                Social Media</button></button>
+
+    <div id="onlinePrivacyInfo" class="info-page">
+
+        <button class="section-back" onclick="showOnlineRights()">← Back</button>
 
         <h2>🔐 Online Privacy</h2>
 
         <p>
-            Privacy means having protection over personal information and
-            aspects of your private life. Online, this can include information
-            such as your photos, location, messages, and contact details.
+            Online privacy includes the information you share with websites,
+            apps, platforms, and other people online.
         </p>
 
-        <h3>Why does online privacy matter?</h3>
-
-        <p>
-            Information shared online can sometimes spread beyond the people
-            you originally intended to share it with. Thinking carefully
-            before sharing personal information can help protect your privacy.
-        </p>
-
-        <h3>What can you do?</h3>
-
-        <p>
-            Review your privacy settings, use strong passwords, and be careful
-            about sharing personal information such as your location, phone
-            number, school details, or private photos.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            Children have a right to privacy, including protection of their
-            privacy, family, home, correspondence, and reputation.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text#16" target="_blank">
-                UNICEF — Convention on the Rights of the Child, Article 16
-            </a>
-        </p>
-        <p class="topic-source">
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
-                UNICEF — Convention on the Rights of the Child
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
-                <li>Check what personal information an app or website is asking for.</li>
+                <li>Check what personal information an app or website asks for.</li>
                 <li>Review your privacy settings regularly.</li>
                 <li>Think carefully before sharing personal information online.</li>
                 <li>If something feels unsafe, talk to a trusted adult.</li>
             </ol>
 
             <p class="action-note">
-                Privacy protections and requirements can vary by platform, country, and situation.
+                Privacy protections can vary by platform, country, and situation.
             </p>
+
         </div>
-    </div>
-    <div id="cyberbullyingInfo">
 
-        <button onclick="showOnlineRights()"><button class="section-back" onclick="showOnlineRights()">← Back to
-                Online
-                &
-                Social Media</button></button>
-
-        <h2>💬 Cyberbullying</h2>
-
-        <p>
-            Cyberbullying is bullying that takes place through digital
-            technologies, such as social media, messaging platforms,
-            gaming platforms, or mobile phones.
-        </p>
-
-        <h3>What can it look like?</h3>
-
-        <p>
-            It can include repeated harmful messages, threats, spreading
-            rumors, sharing embarrassing content, or deliberately excluding
-            someone from online spaces.
-        </p>
-
-        <h3>What can you do?</h3>
-
-        <p>
-            Consider saving evidence, blocking or reporting the account,
-            and telling a trusted adult, teacher, parent, or another person
-            who can help.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            If something online makes you feel unsafe or threatened, you
-            do not have to deal with it alone. Seeking help can be an
-            important first step.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
-                UNESCO — Safe learning environments
+        <div class="topic-source">
+            Source:
+            <a href="https://www.unicef.org/parenting/child-care/online-privacy" target="_blank">
+                UNICEF — Online Privacy
             </a>
+        </div>
+
+    </div>
+
+
+    <div id="cyberbullyingInfo" class="info-page">
+
+        <button class="section-back" onclick="showOnlineRights()">← Back</button>
+
+        <h2>🛡️ Cyberbullying</h2>
+
+        <p>
+            Cyberbullying refers to harmful or bullying behavior that happens
+            through digital platforms or communication tools.
         </p>
+
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
                 <li>Save screenshots or other evidence.</li>
-                <li>Block or report the account if appropriate.</li>
+                <li>Block or report the account when appropriate.</li>
                 <li>Tell a trusted adult, teacher, or school counselor.</li>
                 <li>If you feel unsafe, seek help from a trusted authority.</li>
             </ol>
 
             <p class="action-note">
-                The best next step can depend on the situation and your local laws.
+                The best next step can depend on the situation and local rules.
             </p>
-        </div>
-    </div>
-    <div id="sharingPhotosInfo">
 
-        <button onclick="showOnlineRights()"><button class="section-back" onclick="showOnlineRights()">← Back to
-                Online
-                &
-                Social Media</button></button>
+        </div>
+
+        <div class="topic-source">
+            Source:
+            <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
+                UNESCO — Safe Learning Environments
+            </a>
+        </div>
+
+    </div>
+
+
+    <div id="sharingPhotosInfo" class="info-page">
+
+        <button class="section-back" onclick="showOnlineRights()">← Back</button>
 
         <h2>📸 Sharing Photos</h2>
 
         <p>
-            Photos can contain personal information and can reveal details
-            about someone's identity, location, friends, family, or daily life.
+            Sharing photos online can involve privacy, consent, and control
+            over personal images.
         </p>
 
-        <h3>Before sharing a photo</h3>
-
-        <p>
-            Think about who appears in the photo, who will be able to see it,
-            and whether the people shown are comfortable with it being shared.
-        </p>
-
-        <h3>Why does permission matter?</h3>
-
-        <p>
-            Sharing someone's photo without considering their privacy can
-            expose personal information or cause unwanted attention.
-            Respecting other people's privacy is an important part of
-            responsible online behavior.
-        </p>
-
-        <h3>If a photo of you is shared without your permission</h3>
-
-        <p>
-            Consider asking for it to be removed, using the platform's
-            reporting tools, and talking to a trusted adult if you need help.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text#16" target="_blank">
-                UNICEF — Convention on the Rights of the Child, Article 16
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
@@ -559,144 +535,54 @@
             </ol>
 
             <p class="action-note">
-                Rules about images, privacy, and consent can vary by country and situation.
+                Rules about images, privacy, and consent vary by country and situation.
             </p>
+
         </div>
+
     </div>
-    <div id="stayingSafeInfo">
 
-        <button onclick="showOnlineRights()"><button class="section-back" onclick="showOnlineRights()">← Back to
-                Online
-                &
-                Social Media</button></button>
 
-        <h2>🛡️ Staying Safe Online</h2>
+    <div id="stayingSafeInfo" class="info-page">
 
-        <p>
-            Staying safe online means protecting your accounts, personal
-            information, devices, and privacy while using digital services.
-        </p>
+        <button class="section-back" onclick="showOnlineRights()">← Back</button>
 
-        <h3>Protect your accounts</h3>
+        <h2>🔐 Staying Safe Online</h2>
 
         <p>
-            Use strong and unique passwords, keep your passwords private,
-            and use multi-factor authentication when it is available.
+            Online safety involves protecting your accounts, information,
+            and personal boundaries.
         </p>
 
-        <h3>Protect your personal information</h3>
-
-        <p>
-            Be careful when sharing information such as your address,
-            phone number, school details, location, or private photos.
-            Review the privacy settings of the apps and platforms you use.
-        </p>
-
-        <h3>Be careful with links and messages</h3>
-
-        <p>
-            Think before clicking unfamiliar links or opening unexpected
-            attachments. If something online seems suspicious, ask a
-            trusted adult or another person who can help.
-        </p>
-
-        <h3>Keep your devices secure</h3>
-
-        <p>
-            Keep your devices and apps updated and review which apps have
-            access to information such as your location, camera, microphone,
-            or photos.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/parenting/child-care/online-privacy" target="_blank">
-                UNICEF — Online privacy checklist for parents
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
                 <li>Use strong passwords and keep them private.</li>
-                <li>Check privacy and security settings on your accounts.</li>
-                <li>Be careful when clicking links or talking to unknown people online.</li>
-                <li>If something makes you feel unsafe, stop and talk to a trusted adult.</li>
+                <li>Check privacy and security settings.</li>
+                <li>Be careful with links and unknown people online.</li>
+                <li>If something makes you feel unsafe, talk to a trusted adult.</li>
             </ol>
 
-            <p class="action-note">
-                Online safety practices can vary depending on the platform and situation.
-            </p>
-        </div>
-    </div>
-    <div id="everydayRights">
-
-        <button onclick="showRights()">← Back to Rights</button>
-
-        <h2>⚖️ Everyday Situations</h2>
-
-        <p>Explore simple legal information that can help you understand common situations in everyday life.</p>
-
-        <div class="school-topics">
-
-            <div class="topic" onclick="showBuyingReturning()">
-                <h3>🛍️ Buying & Returning</h3>
-                <p>Learn about basic consumer rights when buying products or services.</p>
-            </div>
-
-            <div class="topic" onclick="showAgreements()">
-                <h3>📄 Agreements</h3>
-                <p>Learn about agreements, terms, and what to consider before agreeing.</p>
-            </div>
-            <div class="topic" onclick="showSomethingWrong()">
-                <h3>🚨 When Something Goes Wrong</h3>
-                <p>Learn what you can do when a purchase or service causes a problem.</p>
-            </div>
-
-            <div class="topic" onclick="showLegalHelp()">
-                <h3>👩‍⚖️ Getting Legal Help</h3>
-                <p>Learn when and how you may seek legal information or assistance.</p>
-            </div>
-
         </div>
 
     </div>
-    <div id="buyingReturningInfo">
 
-        <button onclick="showEverydaySituations()"><button class="section-back" onclick="showEverydaySituations()">←
-                Back to
-                Everyday Situations</button></button>
 
-        <h2>🛍️ Buying & Returning</h2>
+    <div id="buyingReturningInfo" class="info-page">
 
-        <p>
-            Consumer rights are rules that can protect people when they
-            buy products or services. The exact rights and return policies
-            depend on the country, seller, and type of purchase.
-        </p>
+        <button class="section-back" onclick="showEverydaySituations()">← Back</button>
 
-        <h3>Before buying</h3>
+        <h2>🛒 Buying & Returning</h2>
 
         <p>
-            Check the price, product information, return conditions, and
-            any important terms before completing a purchase.
+            When buying something, keep information about the purchase and
+            understand the seller's policies.
         </p>
 
-        <h3>If something goes wrong</h3>
-
-        <p>
-            Keep your receipt, order confirmation, or other proof of purchase.
-            If there is a problem, contact the seller and clearly explain
-            what happened.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            Consumer protection laws differ between countries, so check
-            the rules that apply where you live.
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
@@ -707,313 +593,171 @@
             </ol>
 
             <p class="action-note">
-                Return, refund, and consumer rights can vary by country and situation.
+                Return, refund, and consumer rights vary by country and situation.
             </p>
+
         </div>
-    </div>
-    <div id="buyingReturningInfo">
 
-        <button onclick="showEverydaySituations()"><button class="section-back" onclick="showEverydaySituations()">←
-                Back to
-                Everyday Situations</button></button>
-
-        <h2>🛍️ Buying & Returning</h2>
-
-        <p><strong>Note:</strong> Consumer protection laws are different in each country. This page provides general
-            educational information, not legal advice.</p>
-
-        <h3>Before you buy</h3>
-
-        <p>
-            Before buying a product or service, make sure you understand
-            its price, important terms, and any conditions that apply to
-            the transaction.
-        </p>
-
-        <h3>What about returns and refunds?</h3>
-
-        <p>
-            Return and refund rules depend on the country, the type of
-            product or service, and the circumstances of the purchase.
-            Check the seller's return policy and the consumer laws that
-            apply where you live.
-        </p>
-
-        <h3>If something goes wrong</h3>
-
-        <p>
-            Keep your receipt, order confirmation, messages, or other
-            information related to the purchase. If you have a problem,
-            you can first contact the seller and explain the issue clearly.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            International consumer-protection guidelines encourage clear
-            information about transactions and transparent processes for
-            cancellation, returns, and refunds.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
+        <div class="topic-source">
+            Source:
             <a href="https://unctad.org/publication/united-nations-guidelines-consumer-protection" target="_blank">
-                UN Trade and Development (UNCTAD) — United Nations Guidelines for Consumer Protection
+                UNCTAD — Consumer Protection
             </a>
-        </p>
+        </div>
 
     </div>
-    <div id="agreementsInfo">
 
-        <button onclick="showEverydaySituations()"><button class="section-back" onclick="showEverydaySituations()">←
-                Back to
-                Everyday Situations</button></button>
 
-        <h2>📄 Agreements</h2>
+    <div id="agreementsInfo" class="info-page">
 
-        <p><strong>Note:</strong> The legal effect of an agreement can differ depending on the country and
-            circumstances.
-            This page provides general educational information, not legal advice.</p>
+        <button class="section-back" onclick="showEverydaySituations()">← Back</button>
 
-        <h3>What is an agreement?</h3>
+        <h2>📝 Agreements</h2>
 
         <p>
-            An agreement is an understanding between people or organizations
-            about what each side will do or provide.
+            Agreements can create responsibilities for the people involved.
+            It is important to understand what you are accepting.
         </p>
 
-        <h3>Before you agree</h3>
-
-        <p>
-            Read the important terms carefully and make sure you understand
-            what you are agreeing to, including any costs, responsibilities,
-            deadlines, or conditions.
-        </p>
-
-        <h3>Keep a record</h3>
-
-        <p>
-            When appropriate, keep a copy of the agreement, receipt,
-            messages, or other documents related to it.
-        </p>
-
-        <h3>If you are unsure</h3>
-
-        <p>
-            If an agreement is important or confusing, consider asking a
-            trusted adult or qualified legal professional to help you
-            understand it before agreeing.
-        </p>
-        <p class="topic-source">
-            <strong>Source:</strong>
-            <a href="https://unctad.org/publication/united-nations-guidelines-consumer-protection" target="_blank">
-                UNCTAD — United Nations Guidelines for Consumer Protection
-            </a>
-        </p>
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
-                <li>Read the agreement carefully before accepting it.</li>
+                <li>Read the agreement carefully.</li>
                 <li>Make sure you understand what you are agreeing to.</li>
                 <li>Ask questions if something is unclear.</li>
                 <li>Keep a copy of important agreements or documents.</li>
             </ol>
 
             <p class="action-note">
-                The legal effect of an agreement can depend on the situation and local laws.
+                The legal effect of an agreement depends on the situation and local laws.
             </p>
+
         </div>
+
     </div>
-    <div id="somethingWrongInfo">
 
-        <button onclick="showEverydaySituations()">← Back to Everyday Situations</button>
 
-        <h2>🚨 When Something Goes Wrong</h2>
+    <div id="somethingWrongInfo" class="info-page">
 
-        <p><strong>Note:</strong> Consumer protection and complaint procedures differ between countries. This page
-            provides
-            general educational information, not legal advice.</p>
+        <button class="section-back" onclick="showEverydaySituations()">← Back</button>
 
-        <h3>Start by understanding the problem</h3>
+        <h2>⚠️ Something Went Wrong</h2>
 
         <p>
-            Keep any information that may help explain what happened,
-            such as receipts, order confirmations, messages, or photos.
+            If something goes wrong with a purchase or service, keeping
+            clear records can help you explain what happened.
         </p>
 
-        <h3>Contact the business</h3>
+        <div class="action-box">
 
-        <p>
-            When appropriate, contact the seller or service provider and
-            clearly explain the problem and what you are asking them to do.
-        </p>
+            <h3>🧭 What Can You Do?</h3>
 
-        <h3>If the problem is not resolved</h3>
+            <ol>
+                <li>Write down what happened and keep relevant evidence.</li>
+                <li>Contact the person or business involved.</li>
+                <li>Keep records of messages, receipts, or documents.</li>
+                <li>If unresolved, look for the appropriate complaint or support process.</li>
+            </ol>
 
-        <p>
-            Depending on where you live, you may be able to use a consumer
-            protection authority, a complaints procedure, mediation,
-            alternative dispute resolution, or a court.
-        </p>
+        </div>
 
-        <h3>Remember</h3>
-
-        <p>
-            Keep records of your complaint and any responses you receive.
-            The available remedies and procedures depend on the laws that
-            apply to your situation.
-        </p>
-
-        <p>
-            <strong>Source:</strong>
+        <div class="topic-source">
+            Source:
             <a href="https://unctad.org/publication/united-nations-guidelines-consumer-protection" target="_blank">
-                UNCTAD — United Nations Guidelines for Consumer Protection
+                UNCTAD — Consumer Protection
             </a>
+        </div>
+
+    </div>
+
+
+    <div id="legalHelpInfo" class="info-page">
+
+        <button class="section-back" onclick="showEverydaySituations()">← Back</button>
+
+        <h2>⚖️ Legal Help</h2>
+
+        <p>
+            LawLens provides general educational information. For a specific
+            legal problem, you may need help from a qualified professional
+            or an appropriate support service.
         </p>
+
         <div class="action-box">
+
             <h3>🧭 What Can You Do?</h3>
 
             <ol>
-                <li>Write down what happened and keep any relevant evidence.</li>
-                <li>Contact the person or business involved and explain the problem.</li>
-                <li>Keep records of messages, receipts, or other documents.</li>
-                <li>If the issue is not resolved, look for the appropriate complaint or support process.</li>
+                <li>Write down your situation and your main questions.</li>
+                <li>Collect relevant documents or evidence.</li>
+                <li>Talk to a trusted adult if you are unsure what to do.</li>
+                <li>Look for a qualified legal professional or support service when needed.</li>
             </ol>
 
-            <p class="action-note">
-                The appropriate steps can depend on the type of problem and local rules.
-            </p>
         </div>
+
     </div>
-    <div id="legalHelpInfo">
 
-        <button onclick="showEverydaySituations()"><button class="section-back" onclick="showEverydaySituations()">←
-                Back to
-                Everyday Situations</button></button>
 
-        <h2>👩‍⚖️ Getting Legal Help</h2>
-
-        <p><strong>Note:</strong> The availability of legal services depends on the country and your situation. This
-            page
-            provides general educational information, not legal advice.</p>
-
-        <h3>When might you need help?</h3>
-
-        <p>
-            You may want to seek legal help when you are dealing with a
-            serious dispute, an important agreement, a legal complaint,
-            or a situation where you are unsure about your rights.
-        </p>
-
-        <h3>Where can you start?</h3>
-
-        <p>
-            Depending on where you live, you may be able to contact a lawyer,
-            legal aid organization, public legal service, or another qualified
-            source of legal assistance.
-        </p>
-
-        <h3>What should you prepare?</h3>
-
-        <p>
-            Write down what happened and keep relevant documents, messages,
-            receipts, or other information that may help explain your situation.
-        </p>
-
-        <h3>Remember</h3>
-
-        <p>
-            General information can help you understand a situation, but it
-            does not replace advice from a qualified legal professional.
-        </p>
-        <p class="topic-source">
-            <strong>Source:</strong>
-            <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
-                UNICEF — Convention on the Rights of the Child
-            </a>
-        </p>
-        <div class="action-box">
-            <h3>🧭 What Can You Do?</h3>
-
-            <ol>
-                <li>Write down your situation and the main questions you have.</li>
-                <li>Collect any documents or evidence related to the problem.</li>
-                <li>Talk to a trusted adult if you are unsure what to do next.</li>
-                <li>Look for a qualified legal professional or an appropriate support service when needed.</li>
-            </ol>
-
-            <p class="action-note">
-                Legal procedures and available support services can vary by country and situation.
-            </p>
-        </div>
-    </div>
-    <footer class="footer">
-        <p>LawLens © 2026</p>
-
-        <p>
-            Educational information only — not legal advice.
-        </p>
-
-        <p>
-            LawLens uses public information from trusted sources,
-            including UNICEF and UN resources.
-        </p>
-
-        <a href="https://www.unicef.org/child-rights-convention" target="_blank">
-            Learn more about children's rights
-        </a>
-    </footer>
-    <div id="sourcesInfo">
+    <!-- SOURCES -->
+    <div id="sourcesInfo" class="info-page">
 
         <button class="section-back" onclick="goHome()">← Home</button>
 
         <h2>📚 Sources & References</h2>
 
         <p>
-            LawLens uses information from trusted international organizations.
-            These sources provide general educational information about rights,
-            safety, and consumer protection.
+            LawLens uses information from trusted international organizations
+            for general educational purposes.
         </p>
 
         <div class="source-card">
+
             <h3>👧 UNICEF</h3>
+
             <p>
-                Convention on the Rights of the Child — including children's
-                rights to privacy, participation, protection, and education.
+                Convention on the Rights of the Child, including children's
+                rights related to privacy, participation, protection, and education.
             </p>
 
             <a href="https://www.unicef.org/child-rights-convention/convention-text" target="_blank">
                 Read the Convention →
             </a>
+
         </div>
 
 
         <div class="source-card">
+
             <h3>🏫 UNESCO</h3>
+
             <p>
-                Information about safe learning environments, school violence,
-                bullying, and cyberbullying.
+                Information related to safe learning environments,
+                school violence, bullying, and cyberbullying.
             </p>
 
             <a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank">
                 Safe Learning Environments →
             </a>
+
         </div>
 
 
         <div class="source-card">
-            <h3>🛒 UN Trade and Development (UNCTAD)</h3>
+
+            <h3>🛒 UN Trade and Development</h3>
+
             <p>
-                United Nations Guidelines for Consumer Protection, including
-                principles related to consumer protection and redress.
+                United Nations Guidelines for Consumer Protection.
             </p>
 
             <a href="https://unctad.org/publication/united-nations-guidelines-consumer-protection" target="_blank">
                 Consumer Protection Guidelines →
             </a>
-        </div>
 
+        </div>
 
         <div class="source-note">
             <strong>Important:</strong>
@@ -1023,36 +767,52 @@
         </div>
 
     </div>
-    <div id="aboutInfo">
+
+
+    <!-- ABOUT -->
+    <div id="aboutInfo" class="info-page">
 
         <button class="section-back" onclick="goHome()">← Home</button>
 
         <h2>⚖️ About LawLens</h2>
 
         <p>
-            LawLens is a simple educational web app designed to help young people
-            understand their rights in everyday situations.
+            LawLens is a simple educational web app designed to help young
+            people understand rights and common legal situations.
         </p>
 
         <p>
-            It brings together basic information about school rights, online safety,
+            It brings together information about school rights, online safety,
             privacy, consumer situations, and getting help.
         </p>
 
         <p>
-            The goal is to make legal information easier to understand and easier
-            to explore, especially for young people who may not know where to start.
+            The goal is to make legal information easier to understand and
+            easier to explore.
         </p>
 
-        <div class="source-note">
-            <strong>Important:</strong>
-            LawLens provides general educational information and is not a substitute
-            for professional legal advice. Laws and legal procedures can differ
-            between countries and situations.
+        <div class="info-highlight">
+            LawLens is an educational project. It does not replace professional
+            legal advice, and laws can differ between countries and situations.
         </div>
 
     </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>⚖️ LawLens</p>
+
+        <span>
+            Educational information • Not legal advice
+        </span>
+
+    </footer>
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
